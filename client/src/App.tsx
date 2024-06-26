@@ -11,21 +11,21 @@ function App() {
     <Router>
       <div className="app-container">
         <div className="navbar">
-          <Link to="/"> Dashboard</Link>
+          <Link to="/" className=" ">Dashboard</Link>
           <SignedIn>
             <UserButton />
           </SignedIn>
         </div>
         <Routes>
           <Route
-            path="/"
+            path="/dashboard"
             element={
               <FinancialRecordsProvider>
-                <Dashboard />
+                <Dashboard  />
               </FinancialRecordsProvider>
             }
           />
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/" element={<Auth />} />
         </Routes>
       </div>
     </Router>
