@@ -13,7 +13,7 @@ console.log(path.join(__dirname,"dist"));
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"dist/index.html"))
 })
-const mongoURI: string="mongodb+srv://adityanidhonkar2004:yD4cV35UtC94s3gE@moneymate.igx9sct.mongodb.net/"
+const mongoURI: string=process.env.MONGODB_URI || "mongodb://localhost:27017/"
 mongoose
   .connect(mongoURI)
   .then(() => console.log("CONNECTED TO MONGODB!"))
