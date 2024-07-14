@@ -8,11 +8,11 @@ const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname,"dist")))
-console.log(path.join(__dirname,"dist"));
-app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"dist/index.html"))
-})
+// app.use(express.static(path.join(__dirname,"dist")))
+// console.log(path.join(__dirname,"dist"));
+// app.get("/",(req,res)=>{
+//     res.sendFile(path.join(__dirname,"dist/index.html"))
+// })
 const mongoURI: string=process.env.MONGODB_URI || "mongodb://localhost:27017/"
 mongoose
   .connect(mongoURI)
